@@ -10,23 +10,12 @@ if (!$link) {
 
 echo "Соединение с MySQL установлено!" . PHP_EOL;
 echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
+?>
 
+<h1>TEST</h1>
+
+<?php
 echo "commit1";
-
-$sql = "SHOW TABLES FROM $mirad1n";
-$result = mysql_query($sql);
-
-if (!$result) {
-    echo "Ошибка базы, не удалось получить список таблиц\n";
-    echo 'Ошибка MySQL: ' . mysql_error();
-    exit;
-}
-
-while ($row = mysql_fetch_row($result)) {
-    echo "Таблица: {$row[0]}\n";
-}
-
 mysql_free_result($result);
-
 mysqli_close($link);
 ?>
