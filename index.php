@@ -11,6 +11,8 @@ if (!$link) {
 echo "Соединение с MySQL установлено!" . PHP_EOL;
 echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
 
+echo "commit1";
+
 $sql = "SHOW TABLES FROM $mirad1n";
 $result = mysql_query($sql);
 
