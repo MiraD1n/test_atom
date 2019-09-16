@@ -10,13 +10,14 @@ if ($mysqli->connect_errno) {
 }
 else echo ("Connection DONE!");
 
-$result = $mysqli->query("SELECT * FROM bages WHERE id='1'");
+$result = $mysqli->query("SELECT * FROM bages WHERE id='2'");
 $row = $result->fetch_assoc();
 $t = $row["img_lk"];
-echo $t;
+echo '<p><img src="'.$t.'" width="150" height="150" alt="Письма мастера дзен"></p>';
+}
 
 ?>
-<p><img src="1.png" alt="Письма мастера дзен"></p>
+
 <h1>TEST</h1>
 
 <?php
